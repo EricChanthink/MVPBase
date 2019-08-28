@@ -2,7 +2,7 @@ package cn.ericchan.mvpdemo.presenter;
 
 import cn.ericchan.mvpdemo.bean.ArticleListBean;
 import cn.ericchan.mvpdemo.contract.SingleInterfaceContract;
-import cn.ericchan.mvpdemo.model.IResultCallback;
+import cn.ericchan.mvpdemo.model.ICallback;
 import cn.ericchan.mvpdemo.model.ISingleInterfaceModel;
 import cn.ericchan.mvpdemo.model.SingleInterfaceModel;
 import cn.ericchan.mvpdemo.utils.LP;
@@ -15,7 +15,7 @@ public class SingleInterfacePresenter extends BasePresenter<SingleInterfaceContr
     }
 
     public void getData(int curPage) {
-        singleInterfaceModel.getData(curPage, new IResultCallback<ArticleListBean, String>() {
+        singleInterfaceModel.getData(curPage, new ICallback<ArticleListBean, String>() {
             @Override
             public void onSuccess(ArticleListBean loginResultBean) {
                 //如果Model层请求数据成功,则此处应执行通知View层的代码

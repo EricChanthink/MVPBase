@@ -29,7 +29,7 @@ public class NetUtils {
     private static int DEFAULT_TIMEOUT = 60;
     private static int DEFAULT_TIMEOUT_WRITE = 60;
     public static OkHttpClient mOkHttpClient;
-    private static String mBaseUrl = "http://www.wanandroid.com";
+    private static String mBaseUrl = "https://www.wanandroid.com";
 
     private NetUtils() {
 
