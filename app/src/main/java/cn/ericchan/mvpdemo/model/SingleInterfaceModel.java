@@ -8,7 +8,7 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class SingleInterfaceModel {
+public class SingleInterfaceModel implements ISingleInterfaceModel{
     public void getData(int curPage, final Callback callback) {
         NetUtils.getRetrofit()
                 .create(Api.class)

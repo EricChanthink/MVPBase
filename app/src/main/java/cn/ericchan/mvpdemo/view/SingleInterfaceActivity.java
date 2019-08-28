@@ -8,9 +8,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import cn.ericchan.mvpdemo.R;
+import cn.ericchan.mvpdemo.bean.ArticleListBean;
 import cn.ericchan.mvpdemo.presenter.SingleInterfacePresenter;
 
-public class SingleInterfaceActivity extends AppCompatActivity {
+public class SingleInterfaceActivity extends AppCompatActivity implements ISingleInterfaceIView {
+
 
     private Button button;
     private TextView textView;
@@ -32,6 +34,16 @@ public class SingleInterfaceActivity extends AppCompatActivity {
                 singleInterfacePresenter.getData(0);
             }
         });
+
+    }
+
+    @Override
+    public void showArticleSuccess(ArticleListBean bean) {
+
+    }
+
+    @Override
+    public void showArticleFail(String errorMsg) {
 
     }
 }
