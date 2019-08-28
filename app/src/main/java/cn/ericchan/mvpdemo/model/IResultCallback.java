@@ -1,6 +1,6 @@
 package cn.ericchan.mvpdemo.model;
 
-public interface Callback<K, V> {
+public interface IResultCallback<K, V> {
     void onSuccess(K data);
 
     void onFail(V data);

@@ -9,7 +9,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class SingleInterfaceModel implements ISingleInterfaceModel{
-    public void getData(int curPage, final Callback callback) {
+    public void getData(int curPage, final IResultCallback callback) {
         NetUtils.getRetrofit()
                 .create(Api.class)
                 .getData(curPage)
